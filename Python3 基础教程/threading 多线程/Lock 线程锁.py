@@ -5,11 +5,11 @@ import threading
 
 def job1():
     global A, lock
-    lock.acquire()
+    lock.acquire() # 锁住
     for i in range(10):
         A += 1
         print('job1:', A)
-    lock.release()
+    lock.release() # 释放
 
 def job2():
     global A, lock
