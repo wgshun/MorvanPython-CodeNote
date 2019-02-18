@@ -23,18 +23,18 @@ tk.Entry(window, textvariable=username).place(x=210, y=180)
 tk.Entry(window, textvariable=password, show='*').place(x=210, y=210)
 
 # 登陆与注册两个函数
-import pickle
+import pickle # pickle库用来保存数据的一个模块
 from tkinter import messagebox
 def login():
     user_name = username.get()
     pass_word = password.get()
     try:
-        with open('user_info.pickle', 'rb') as user_file:
-            user_info = pickle.load(user_file)
+        with open('user_info.pickle', 'rb') as user_file:# 使用open打开pickle文件
+            user_info = pickle.load(user_file) # 使用load加载pickle文件
     except FileNotFoundError:
         with open('user_info.pickle', 'wb') as user_file:
             user_info = {'admin':'admin'}
-            pickle.dump(user_info, user_file)
+            pickle.dump(user_info, user_file) # 使用dump保存pickle文件
     if user_name in user_info:
         if pass_word == user_info[user_name]:
             messagebox.showinfo(title='欢迎登录!', message='登录成功。')
