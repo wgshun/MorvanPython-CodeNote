@@ -7,7 +7,7 @@ window.title('MY')
 window.geometry('500x500')
 
 canvas = tk.Canvas(window, bg='green', width=500, heigh=400)
-image_file = tk.PhotoImage(file='cat.gif')
+image_file = tk.PhotoImage(file='welcome.gif')
 # 将图片放到画布中前两个参数是对画布坐标0,0的偏差值，画布默认左上角0,0
 # anchor 指的是图片的基准点在图片的什么位置，有nw，e，w，center等参数就是图片的各个角边
 image = canvas.create_image(6, 6, anchor='nw',image=image_file)
