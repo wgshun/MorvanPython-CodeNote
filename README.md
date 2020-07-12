@@ -1,8 +1,7 @@
 # MorvanPython-CodeNote
 
 
-本地项目上传github
-git clone XXXXXX
+https://www.cnblogs.com/wgong/p/6914717.html
 
 git add .
 
